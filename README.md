@@ -13,16 +13,16 @@ By conserving wildlife, we're ensuring that future generations can enjoy our nat
 
 ````bash
 WSL2 :
-toto@DESKTOP-OBTCMJQ:/mnt/c/Windows/system32$
+arthur@DESKTOP-OBTCMJQ:/mnt/c/Windows/system32$
 
 $ cd ../..
-toto@DESKTOP-OBTCMJQ:/mnt/c$
+arthur@DESKTOP-OBTCMJQ:/mnt/c$
 
 $ cd Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet
-toto@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
+arthur@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
 
 $ source MYVENV/bin/activate
-(MYVENV) toto@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
+(MYVENV) arthur@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
 ````
 
 ---
@@ -368,8 +368,7 @@ curl 'https://group6-container.ashycliff-15f451bd.westeurope.azurecontainerapps.
  (cf *img/ACAendpointcall.png*)
 
 ---
-### 10. Bonus
-#### 10.1. Use a linter for Dockerfile in the deployment pipeline to ensure its consistency
+### 10.1. Use a linter for Dockerfile in the deployment pipeline to ensure its consistency
 
 - We use the Dockerfile linter named *`hadolint`*.
 - In the *`docker_image.yml`* file, we add these lines :
@@ -399,23 +398,23 @@ curl 'https://group6-container.ashycliff-15f451bd.westeurope.azurecontainerapps.
     - *Complete job*
 
 ---
-#### 10.2. Set up a local prometheus stack to scrape and store your exposed metrics
+### 10.2. Set up a local prometheus stack to scrape and store your exposed metrics
 
 On a second CLI terminal, we have to type :
 
 ````bash
 WSL2 :
-toto@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
+arthur@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet$
 
 $ cd prometheus
-toto@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet/prometheus$
+arthur@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet/prometheus$
 
 $ sudo chmod a+rx prometheus.exe # on Windows
 Or
 $ sudo chmod a+rx prometheus # on Linux
-[sudo] password for toto:
+[sudo] password for arthur:
 
-toto@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet/prometheus$
+arthur@DESKTOP-OBTCMJQ:/mnt/c/Users/arthu/Efrei/M2/APPLICATIONS_OF_BIG_DATA_2/projet/prometheus$
 $ ./prometheus.exe # on Windows
 Or
 $ prometheus --config.file=prometheus.yml --storage.tsdb.path=/tmp/prometheus # on Windows or Linux
